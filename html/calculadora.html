@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/calculadora.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>CALCULADORA</title>
+</head>
+
+<body>
+
+    <div class="cabecalho">
+        <div class="logo">PROJETOS BÁSICOS </div>
+        <div class="icons"> 
+                <a href="index.html">
+                    <button class="home">HOME</button>
+                </a>
+            <button class="login">LOG-IN</button>
+        </div>
+    </div>
+
+    <h1>CALCULADORA</h1>
+
+    <main id="calculadora">
+        
+        <input type="text" id="display" readonly>
+        
+        <div class="teclado">
+
+            <div class="linha">
+                <button class="operador" onclick="clearDisplay()">CE</button>
+                <button class="operador" onclick="clearDisplay()">C</button>
+                <button class="operador" onclick="addOperator('/')">/</button>
+                <button class="operador" id="backspace" onclick="deleteNumber()"> <span class="material-icons">backspace</span> </button>
+            </div>
+
+            <div class="linha">
+                <button class="numero" onclick="addNumber(7)">7</button>
+                <button class="numero" onclick="addNumber(8)">8</button>
+                <button class="numero" onclick="addNumber(9)">9</button>
+                <button class="operador" onclick="addOperator('*')">*</button>
+            </div>
+
+            <div class="linha">
+                <button class="numero" onclick="addNumber(4)">4</button>
+                <button class="numero" onclick="addNumber(5)">5</button>
+                <button class="numero" onclick="addNumber(6)">6</button>
+                <button class="operador" onclick="addOperator('-')">-</button>
+            </div>
+
+            <div class="linha">
+                <button class="numero" onclick="addNumber(1)">1</button>
+                <button class="numero" onclick="addNumber(2)">2</button>
+                <button class="numero" onclick="addNumber(3)">3</button>
+                <button class="operador" onclick="addOperator('+')">+</button>
+            </div>
+
+            <div class="linha">
+                <button class="operador" onclick="negative()">+/-</button>
+                <button class="numero"onclick="addNumber(0)">0</button>
+                <button class="operador" onclick="ponto()">.</button> 
+                <button class="operador" onclick="resultado()">=</button>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script src="../js/calculadora.js"></script>
+</body>
+</html>
